@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PyWeather</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesOfWidgets.css')}}"/>
+    <meta charset="utf-8">
+
+</head>
+<body>
+    <h1 style="text-align: center;font-family:Arial, Helvetica, sans-serif;">
+        Погода на 5 дней<br>
+        По Курской области<br>
+        <img src="static\Icons\gerb.png" alt="aaa" class="gerb">
+    </h1>
+
+    <div class="fact_window">
+            {% for key in di%}{% endfor %}
+            <div class="main">
+                {{di[0][3][:10]}}
+            </div>
+            <div class="main">
+                {{di[8][3][:10]}}
+            </div>
+            <div class="main">
+                {{di[15][3][:10]}}
+            </div>
+            <div class="main">
+                {{di[23][3][:10]}}
+            </div>
+            
+            <div class="main">
+                {{di[31][3][:10]}}
+            </div>
+            
+            <div class="main1">
+               <ul class="main2">
+                <ol class="item">
+                    {{di[0][3][10:]}}: +{{di[0][1]}}&#176;<img src="static\Icons\{{di[0][2]}}1.png" alt="aaa" class="cloud">
+                        
+                </ol>
+                <ol class="item">{{di[1][3][10:16]}} + {{di[1][1]}}&#176;<img src="static\Icons\{{di[1][2]}}1.png" alt="aaa" class="cloud"></ol>
+                <ol class="item">{{di[2][3][10:]}} +{{di[2][1]}}&#176;<img src="static\Icons\{{di[2][2]}}1.png" alt="aaa" class="cloud"></ol>
+                <ol class="item">{{di[3][3][10:]}} +{{di[3][1]}}&#176;<img src="static\Icons\{{di[3][2]}}1.png" alt="aaa" class="cloud"></ol>
+                <ol class="item">{{di[4][3][10:]}} +{{di[4][1]}}&#176;<img src="static\Icons\{{di[4][2]}}1.png" alt="aaa" class="cloud"></ol>
+                <ol class="item">{{di[5][3][10:]}} +{{di[5][1]}}&#176;<img src="static\Icons\{{di[5][2]}}1.png" alt="aaa" class="cloud"></ol>
+                <ol class="item">{{di[6][3][10:]}} +{{di[6][1]}}&#176;<img src="static\Icons\{{di[6][2]}}1.png" alt="aaa" class="cloud"></ol>
+                <ol class="item">{{di[7][3][10:]}} +{{di[7][1]}}&#176;<img src="static\Icons\{{di[7][2]}}1.png" alt="aaa" class="cloud"></ol>
+               </ul>
+            </div>
+            <div class="main1">
+                <ul class="main2">
+                    <ol class="item">{{di[8][3][10:]}}: +{{di[8][1]}}&#176;<img src="static\Icons\{{di[8][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[9][3][10:]}}: +{{di[9][1]}}&#176;<img src="static\Icons\{{di[9][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[10][3][10:]}}: +{{di[10][1]}}&#176;<img src="static\Icons\{{di[10][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[11][3][10:]}}: +{{di[11][1]}}&#176;<img src="static\Icons\{{di[11][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[12][3][10:]}}: +{{di[12][1]}}&#176;<img src="static\Icons\{{di[12][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[13][3][10:]}}: +{{di[13][1]}}&#176;<img src="static\Icons\{{di[13][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[14][3][10:]}}: +{{di[14][1]}}&#176;<img src="static\Icons\{{di[14][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[15][3][10:]}}: +{{di[15][1]}}&#176;<img src="static\Icons\{{di[15][2]}}1.png" alt="aaa" class="cloud"></ol>
+                   </ul>
+            </div>
+            <div class="main1">
+                <ul class="main2">
+                    <ol class="item">{{di[16][3][10:]}}: +{{di[16][1]}}&#176;<img src="static\Icons\{{di[16][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[17][3][10:]}}: +{{di[17][1]}}&#176;<img src="static\Icons\{{di[17][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[18][3][10:]}}: +{{di[18][1]}}&#176;<img src="static\Icons\{{di[18][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[19][3][10:]}}: +{{di[19][1]}}&#176;<img src="static\Icons\{{di[19][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[20][3][10:]}}: +{{di[20][1]}}&#176;<img src="static\Icons\{{di[20][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[21][3][10:]}}: +{{di[21][1]}}&#176;<img src="static\Icons\{{di[21][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[22][3][10:]}}: +{{di[22][1]}}&#176;<img src="static\Icons\{{di[22][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[23][3][10:]}}: +{{di[23][1]}}&#176;<img src="static\Icons\{{di[23][2]}}1.png" alt="aaa" class="cloud"></ol>
+                   </ul>
+            </div>
+            <div class="main1">
+                <ul class="main2">
+                    <ol class="item">{{di[24][3][10:]}}: +{{di[24][1]}}&#176;<img src="static\Icons\{{di[24][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[25][3][10:]}}: +{{di[25][1]}}&#176;<img src="static\Icons\{{di[25][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[26][3][10:]}}: +{{di[26][1]}}&#176;<img src="static\Icons\{{di[26][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[27][3][10:]}}: +{{di[27][1]}}&#176;<img src="static\Icons\{{di[27][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[28][3][10:]}}: +{{di[28][1]}}&#176;<img src="static\Icons\{{di[28][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[29][3][10:]}}: +{{di[29][1]}}&#176;<img src="static\Icons\{{di[29][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[30][3][10:]}}: +{{di[30][1]}}&#176;<img src="static\Icons\{{di[30][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[31][3][10:]}}: +{{di[31][1]}}&#176;<img src="static\Icons\{{di[31][2]}}1.png" alt="aaa" class="cloud"></ol>
+                   </ul>
+            </div>
+            <div class="main1">
+                <ul class="main2">
+                    <ol class="item">{{di[32][3][10:]}}: +{{di[32][1]}}&#176;<img src="static\Icons\{{di[32][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[3][3][10:]}}: +{{di[33][1]}}&#176;<img src="static\Icons\{{di[33][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[34][3][10:]}}: +{{di[34][1]}}&#176;<img src="static\Icons\{{di[34][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[35][3][10:]}}: +{{di[35][1]}}&#176;<img src="static\Icons\{{di[35][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[36][3][10:]}}: +{{di[36][1]}}&#176;<img src="static\Icons\{{di[36][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[37][3][10:]}}: +{{di[37][1]}}&#176;<img src="static\Icons\{{di[37][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[38][3][10:]}}: +{{di[38][1]}}&#176;<img src="static\Icons\{{di[38][2]}}1.png" alt="aaa" class="cloud"></ol>
+                    <ol class="item">{{di[39][3][10:]}}: +{{di[39][1]}}&#176;<img src="static\Icons\{{di[39][2]}}1.png" alt="aaa" class="cloud"></ol>
+                   </ul>
+                    
+            </div>   
+       
+    </div>
+</body>
+<footer id="footer_site">
+    <span>&copy; 2023</span>
+</footer>
+</html>
