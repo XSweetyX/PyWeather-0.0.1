@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 #response = requests.get('https://yandex.ru/pogoda/kursk?lat=51.730848&lon=36.193015')  # проверяем успешен ли запрос?
 #print(response.text)  # выводим полученный ответ на экран
-#это пример не очень качественного кода с долгим выполнением
 #данный код запускает драйвер хрома из-за чего происходит фактически программный поиск содержимого
 website ='https://yandex.ru/pogoda/kursk?lat=51.730848&lon=36.193015'
 driver = webdriver.Chrome("D:\1\Learn Python VSCode\.venv\Drivers\chromedriver.exe")
